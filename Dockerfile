@@ -1,14 +1,24 @@
-# Use OpenJDK 17 (kyunki tum Java 17 use kar rahe ho)
-FROM eclipse-temurin:17-jdk
 
-# Set working directory
+
+# Stage 1: Build the JAR
+FROM eclipse-temurin:17-jdk as builder
+
 WORKDIR /app
 
-# Copy JAR into container
-COPY target/assignment-0.0.1-SNAPSHOT.jar app.jar
+# Copy project files
+COPY . .
 
-# Expose app port
+# Build the project (skip tests for speed)
+RUN ./mvnw clean package -DskipTests
+
+# Stage 2: Run the JAR
+FROM eclipse-temurin:17-jdk
+
+WORKDIR /app
+
+# Copy jar from builder stage
+COPY --from=builder /app/target/assignment-0.0.1-SNAPSHOT.jar app.jar
+
 EXPOSE 8080
 
-# Run the JAR
 ENTRYPOINT ["java", "-jar", "app.jar"]
