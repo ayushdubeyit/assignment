@@ -1,0 +1,33 @@
+---
+
+### ✅ 4. sample-leads.csv
+- Type: CSV text file
+- Kaam: Test data for upload API.
+
+Content:
+```csv
+name,role,company,industry,location,linkedin_bio
+Ava Patel,Head of Growth,FlowMetrics,SaaS,Bengaluru,"Head of Growth at FlowMetrics, scaling SaaS revenue."
+Rohit Singh,Engineering Manager,DevSolutions,Software,Noida,"Engineering manager, leads infra teams."
+Sneha Rao,Founder,Medix,Healthcare,Bengaluru,"Founder of Medix, SaaS platform for clinics."---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
