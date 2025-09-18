@@ -159,3 +159,34 @@ java -jar target/assignment-0.0.1-SNAPSHOT.jar
 
 Application will start at:
 http://localhost:8080
+
+
+🚀 Deployment
+
+This project is deployed on Render.
+
+Live URL: https://assignment-9w39.onrender.com
+
+Test the APIs (Live)
+
+Set Offer
+
+curl -X POST https://assignment-9w39.onrender.com/offer \
+  -H "Content-Type: application/json" \
+  -d '{"name":"AI Outreach Automation","valueProps":["24/7 outreach","6x meetings"],"idealUseCases":["SaaS"]}'
+
+
+Upload Leads
+
+curl -X POST https://assignment-9w39.onrender.com/leads/upload \
+  -F "file=@sample-leads.csv"
+
+
+Run Scoring
+
+curl -X POST https://assignment-9w39.onrender.com/score
+
+
+Get Results
+
+curl https://assignment-9w39.onrender.com/score/results
