@@ -3,7 +3,7 @@
 ## 🚀 Run Locally
 
 ### Prerequisites
-- Java 21+
+- Java 17+
 - Maven 3+
 
 ### Build & Run
