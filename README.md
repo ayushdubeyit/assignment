@@ -151,3 +151,11 @@ mvn test
 
 
 ---
+
+
+### Build & Run
+mvn clean package -DskipTests
+java -jar target/assignment-0.0.1-SNAPSHOT.jar
+
+Application will start at:
+http://localhost:8080
